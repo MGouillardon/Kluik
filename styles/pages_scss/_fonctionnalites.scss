@@ -15,12 +15,13 @@
     justify-content: center;
 }
 
-.btn-features{
+.btn-features {
     @extend %btn;
 }
+
 //Global-section-features
 
-.global-container-features{
+.global-container-features {
     padding-top: 100px;
     padding-bottom: 200px;
 }
@@ -37,7 +38,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    
+
 }
 
 .card-features {
@@ -46,24 +47,27 @@
     flex-direction: column;
     width: 300px;
     height: 250px;
-    margin: 10px 100px;
+    margin: 20px 100px;
     text-align: center;
+    border-radius: 10px;
     box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.16);
 }
+
 .logo-features img {
     width: 100px;
     height: 100px;
-}    
+}
 
 .txt-features {
     margin: 10px;
 }
 
-.txt-features p:nth-of-type(1){
+.txt-features p:nth-of-type(1) {
     font-weight: 600;
     font-size: 22px;
 }
-.txt-features p:nth-of-type(2){
+
+.txt-features p:nth-of-type(2) {
     font-size: 18px;
     line-height: 1.2;
 }
@@ -72,31 +76,91 @@
 
 @media screen and (min-width: 2000px) {
 
-    .card-features{
+    .card-features {
         width: 400px;
         margin: 10px 100px 100px;
     }
 }
+
 @media screen and (max-width: 1500px) {
 
-    .card-features{
+    .card-features {
         width: 300px;
         margin: 10px 50px 100px;
     }
 }
+
 @media screen and (max-width: 800px) {
-    .card-features{
+    .card-features {
         width: 400px;
         margin: 10px 50px;
     }
 }
+
 @media screen and (max-width: 500px) {
-    .txt-features p:nth-of-type(1){
+    .txt-features p:nth-of-type(1) {
         font-weight: 600;
         font-size: 18px;
     }
-    .txt-features p:nth-of-type(2){
+
+    .txt-features p:nth-of-type(2) {
         font-size: 16px;
         line-height: 1.2;
+    }
+}
+
+// Newsletter
+
+
+
+form {
+    width: 50%;
+    margin: 0 auto 200px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+form input {
+    width: 90%;
+    padding: 15px;
+    font-size: 20px;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 9999px;
+    background: $secondary-bg-color ;
+}
+
+form button {
+    @extend %btn;
+    position: absolute;
+    right: 0px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    form {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 600px) {
+    form button {
+        width: 100px;
+        font-size: 16px;
+    }
+
+    form input {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 380px) {
+    form button {
+        width: 100px;
+        font-size: 14px;
+    }
+
+    form input {
+        font-size: 12px;
     }
 }
