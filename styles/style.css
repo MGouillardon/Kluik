@@ -27,7 +27,7 @@
     padding: 10px 5px;
   }
 }
-.container-box, .hero, nav ul {
+.container-faq, .container-box, .hero, nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,6 +47,7 @@ nav {
   justify-content: space-between;
   position: fixed;
   background: #fff;
+  z-index: 50;
 }
 nav .nav-logo {
   font-size: 30px;
@@ -66,7 +67,7 @@ nav li a::after {
   height: 2px;
   position: relative;
   top: 5px;
-  background: #136BA8;
+  background: #307DB7;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
@@ -81,6 +82,9 @@ nav .tryout-link {
   border-radius: 9999px;
   color: #fff;
   background: #136BA8;
+}
+nav .tryout-link:hover {
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.16);
 }
 nav .responsive-nav-btn {
   display: none;
@@ -100,6 +104,7 @@ nav .responsive-nav-btn {
     position: absolute;
     top: -5px;
     border-bottom: 1px solid #136BA8;
+    z-index: 50;
   }
   nav ul {
     width: 100%;
@@ -132,6 +137,7 @@ nav .responsive-nav-btn {
 }
 .global-container {
   padding-top: 200px;
+  padding-bottom: 400px;
 }
 
 .hero {
@@ -215,6 +221,7 @@ nav .responsive-nav-btn {
 .container-performances {
   padding: 120px 20px 170px;
   margin-bottom: 100px;
+  z-index: -1;
   background: linear-gradient(45deg, rgba(251, 247, 230, 0.53) 0%, rgba(251, 247, 230, 0.53) 14.286%, rgba(245, 255, 242, 0.53) 14.286%, rgba(245, 255, 242, 0.53) 28.572%, rgba(243, 255, 252, 0.53) 28.572%, rgba(243, 255, 252, 0.53) 42.858%, rgba(209, 254, 255, 0.53) 42.858%, rgba(209, 254, 255, 0.53) 57.144%, rgba(157, 242, 255, 0.53) 57.144%, rgba(157, 242, 255, 0.53) 71.43%, rgba(122, 231, 255, 0.53) 71.43%, rgba(122, 231, 255, 0.53) 85.716%, rgba(144, 224, 246, 0.53) 85.716%, rgba(144, 224, 246, 0.53) 100.002%), linear-gradient(135deg, rgb(248, 144, 216) 0%, rgb(248, 144, 216) 12.5%, rgb(255, 161, 235) 12.5%, rgb(255, 161, 235) 25%, rgb(246, 167, 241) 25%, rgb(246, 167, 241) 37.5%, rgb(242, 184, 251) 37.5%, rgb(242, 184, 251) 50%, rgb(224, 183, 246) 50%, rgb(224, 183, 246) 62.5%, rgb(212, 183, 253) 62.5%, rgb(212, 183, 253) 75%, rgb(161, 146, 251) 75%, rgb(161, 146, 251) 87.5%, rgb(147, 159, 248) 87.5%, rgb(147, 159, 248) 100%);
   -webkit-clip-path: polygon(0 0, 100% 17%, 100% 100%, 0 82%);
           clip-path: polygon(0 0, 100% 17%, 100% 100%, 0 82%);
@@ -303,5 +310,68 @@ nav .responsive-nav-btn {
   }
   .container-box .box .box-title {
     font-size: 20px;
+  }
+}
+.container-faq {
+  width: 70%;
+  max-width: 900px;
+  min-width: 300px;
+  height: auto;
+  margin: 10px auto 150px;
+  flex-direction: column;
+}
+
+.questions {
+  width: 100%;
+  height: auto;
+  margin: 5px;
+}
+
+.visible-pannel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F2F3F4;
+  border-radius: 10px;
+  position: relative;
+  z-index: 15;
+}
+
+.visible-pannel img {
+  margin-right: 10px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.toggle-pannel {
+  padding: 0 15px;
+  height: 0;
+  opacity: 0;
+  transition: all 0.3 ease-in-out;
+}
+
+.toggle-pannel h4 {
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+.toggle-pannel p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.question-title {
+  margin-left: 10px;
+  padding: 15px 5px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 750px) {
+  .container-faq {
+    width: 90%;
+  }
+  .question-title {
+    margin-left: 10px;
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */

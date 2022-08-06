@@ -15,6 +15,7 @@ nav {
     justify-content: space-between;
     position: fixed;
     background: $main-bg-color;
+    z-index: 50;
     // border-bottom: 1px solid $main-color;
 
     .nav-logo {
@@ -40,7 +41,7 @@ nav {
                 height: 2px;
                 position: relative;
                 top: 5px;
-                background: $main-color;
+                background: $secondary-color;
                 transform: scaleX(0);
                 transition: transform 0.3s ease-in-out;
             }
@@ -59,6 +60,10 @@ nav {
         border-radius: 9999px;
         color: $main-bg-color;
         background: $main-color;
+
+        &:hover {
+            box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.16);
+        }
     }
 
     .responsive-nav-btn {
@@ -81,6 +86,7 @@ nav {
         position: absolute;
         top: -5px;
         border-bottom: 1px solid $main-color;
+        z-index: 50;
 
         ul {
             width: 100%;
@@ -122,7 +128,7 @@ nav {
 
 .global-container {
     padding-top: 200px;
-    // padding-bottom: 400px;
+    padding-bottom: 400px;
 }
 
 // Hero
@@ -234,6 +240,7 @@ nav {
 .container-performances {
     padding: 120px 20px 170px;
     margin-bottom: 100px;
+    z-index: -1;
     background: linear-gradient(45deg,
             rgba(251, 247, 230, 0.53) 0%,
             rgba(251, 247, 230, 0.53) 14.286%,
@@ -375,5 +382,71 @@ nav {
                 font-size: 20px;
             }
         }
+    }
+}
+
+// FAQ
+
+.container-faq {
+    width: 70%;
+    max-width: 900px;
+    min-width: 300px;
+    height: auto;
+    margin: 10px auto 150px;
+    @extend %flex-center;
+    flex-direction: column;
+}
+
+.questions {
+    width: 100%;
+    height: auto;
+    margin: 5px;
+}
+
+.visible-pannel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $secondary-bg-color;
+    border-radius: 10px;
+    position: relative;
+    z-index: 15;
+}
+.visible-pannel img {
+    margin-right: 10px;
+    width: 25px;
+    cursor: pointer;
+}
+
+
+.toggle-pannel {
+    padding: 0 15px;
+    height: 0;
+    opacity: 0;
+    transition: all 0.3 ease-in-out;
+}
+.toggle-pannel h4 {
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+.toggle-pannel p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.question-title {
+    margin-left: 10px;
+    padding: 15px 5px;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 750px) {
+    .container-faq {
+        width: 90%;
+
+    }
+    .question-title{
+        margin-left: 10px;
+        font-size: 18px;
     }
 }
