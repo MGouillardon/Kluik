@@ -13,6 +13,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    background: $main-bg-color;
+    // border-bottom: 1px solid $main-color;
 
     .nav-logo {
         font-size: 30px;
@@ -107,5 +110,100 @@ nav {
         .active-nav{
             display: flex;
         }
+    }
+}
+
+// Global container 
+
+.global-container {
+    padding-top: 200px;
+    padding-bottom: 400px;
+}
+
+// Hero
+
+.hero {
+    width: 100%;
+    height: 900px;
+    @extend %flex-center;
+    flex-direction: column;
+    padding: 50px 0 75px;
+}
+
+.global-title {
+    @extend %global-title;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 32px;
+    padding-bottom: 20px;
+    line-height: 1.2;
+    
+}
+
+.hero img {
+    width: 900px;
+}
+
+
+@media screen and (max-width: 1100px){
+    .global-container {
+        padding-top: 150px;
+    }
+    .hero {
+        padding: 0;
+        height: 700px;
+    }
+    .hero img {
+        width: 700px;
+    }
+    .sub-title {
+        font-size: 27px;
+    }
+}
+@media screen and (max-width: 750px){
+    .global-container {
+        padding-top: 100px;
+    }
+    .hero {
+        padding: 100px 0 50px;
+        height: 500px;
+    }
+    .hero img {
+        width: 500px;
+    }
+    .sub-title {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 550px){
+    .global-container {
+        padding-top: 100px;
+    }
+    .hero {
+        padding: 75px 0;
+        height: 400px;
+    }
+    .hero img {
+        width: 400px;
+    }
+    .sub-title {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 450px){
+    .global-container {
+        padding-top: 100px;
+    }
+    .hero {
+        padding: 75px 0;
+        height: 400px;
+    }
+    .hero img {
+        width: 320px;
+    }
+    .sub-title {
+        font-size: 18px;
     }
 }

@@ -1,4 +1,33 @@
-nav ul {
+.global-title {
+  font-family: Comfortaa, sans-serif;
+  text-align: center;
+  font-size: 70px;
+  padding: 0 25px 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .global-title {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .global-title {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .global-title {
+    font-size: 35px;
+    padding: 10px 5px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .global-title {
+    font-size: 26px;
+    padding: 10px 5px;
+  }
+}
+.hero, nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,6 +45,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  background: #fff;
 }
 nav .nav-logo {
   font-size: 30px;
@@ -97,5 +128,88 @@ nav .responsive-nav-btn {
   }
   nav .active-nav {
     display: flex;
+  }
+}
+.global-container {
+  padding-top: 200px;
+  padding-bottom: 400px;
+}
+
+.hero {
+  width: 100%;
+  height: 900px;
+  flex-direction: column;
+  padding: 50px 0 75px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 32px;
+  padding-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero img {
+  width: 900px;
+}
+
+@media screen and (max-width: 1100px) {
+  .global-container {
+    padding-top: 150px;
+  }
+  .hero {
+    padding: 0;
+    height: 700px;
+  }
+  .hero img {
+    width: 700px;
+  }
+  .sub-title {
+    font-size: 27px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .global-container {
+    padding-top: 100px;
+  }
+  .hero {
+    padding: 100px 0 50px;
+    height: 500px;
+  }
+  .hero img {
+    width: 500px;
+  }
+  .sub-title {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .global-container {
+    padding-top: 100px;
+  }
+  .hero {
+    padding: 75px 0;
+    height: 400px;
+  }
+  .hero img {
+    width: 400px;
+  }
+  .sub-title {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .global-container {
+    padding-top: 100px;
+  }
+  .hero {
+    padding: 75px 0;
+    height: 400px;
+  }
+  .hero img {
+    width: 320px;
+  }
+  .sub-title {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */
