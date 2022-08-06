@@ -1,4 +1,4 @@
-.global-title {
+.title {
   font-family: Comfortaa, sans-serif;
   text-align: center;
   font-size: 70px;
@@ -6,23 +6,23 @@
 }
 
 @media screen and (max-width: 1100px) {
-  .global-title {
+  .title {
     font-size: 60px;
   }
 }
 @media screen and (max-width: 850px) {
-  .global-title {
+  .title {
     font-size: 50px;
   }
 }
 @media screen and (max-width: 600px) {
-  .global-title {
+  .title {
     font-size: 35px;
     padding: 10px 5px;
   }
 }
 @media screen and (max-width: 400px) {
-  .global-title {
+  .title {
     font-size: 26px;
     padding: 10px 5px;
   }
@@ -373,5 +373,50 @@ nav .responsive-nav-btn {
   .question-title {
     margin-left: 10px;
     font-size: 18px;
+  }
+}
+.container-cta {
+  padding: 150px 0 100px;
+  -webkit-clip-path: polygon(0 17%, 100% 0%, 100% 82%, 0 100%);
+          clip-path: polygon(0 17%, 100% 0%, 100% 82%, 0 100%);
+  background: linear-gradient(-45deg, rgba(251, 247, 230, 0.53) 0%, rgba(251, 247, 230, 0.53) 14.286%, rgba(245, 255, 242, 0.53) 14.286%, rgba(245, 255, 242, 0.53) 28.572%, rgba(243, 255, 252, 0.53) 28.572%, rgba(243, 255, 252, 0.53) 42.858%, rgba(209, 254, 255, 0.53) 42.858%, rgba(209, 254, 255, 0.53) 57.144%, rgba(157, 242, 255, 0.53) 57.144%, rgba(157, 242, 255, 0.53) 71.43%, rgba(122, 231, 255, 0.53) 71.43%, rgba(122, 231, 255, 0.53) 85.716%, rgba(144, 224, 246, 0.53) 85.716%, rgba(144, 224, 246, 0.53) 100.002%), linear-gradient(-135deg, rgb(248, 144, 216) 0%, rgb(248, 144, 216) 12.5%, rgb(255, 161, 235) 12.5%, rgb(255, 161, 235) 25%, rgb(246, 167, 241) 25%, rgb(246, 167, 241) 37.5%, rgb(242, 184, 251) 37.5%, rgb(242, 184, 251) 50%, rgb(224, 183, 246) 50%, rgb(224, 183, 246) 62.5%, rgb(212, 183, 253) 62.5%, rgb(212, 183, 253) 75%, rgb(161, 146, 251) 75%, rgb(161, 146, 251) 87.5%, rgb(147, 159, 248) 87.5%, rgb(147, 159, 248) 100%);
+}
+
+.txt-cta {
+  text-align: center;
+  font-size: 22px;
+  padding: 0 10px;
+}
+
+.btn-cta {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 30px auto;
+  width: 250px;
+  padding: 20px;
+  border-radius: 9999px;
+  color: #fff;
+  background: #136BA8;
+}
+.btn-cta:hover {
+  box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (max-width: 750px) {
+  .txt-cta {
+    font-size: 18px;
+  }
+  .btn-cta {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .btn-cta {
+    width: 150px;
+    font-size: 20px;
+    margin: 20px auto;
+    padding: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
