@@ -84,6 +84,7 @@ nav {
         flex-direction: column;
         height: auto;
         position: absolute;
+        position: fixed;
         top: -5px;
         border-bottom: 1px solid $main-color;
         z-index: 50;
@@ -668,9 +669,17 @@ nav {
         position: relative;
     }
 
-    .footer-col ul li a {
+    .footer-col ul{
+        height: auto;
+        position: relative;
         display: none;
     }
+
+    .footer-col ul.active {
+        display: block;
+        position: relative;
+        
+      }
 
     .footer-col h4 {
         font-size: 20px;
@@ -719,35 +728,13 @@ nav {
 
     .arrow {
         cursor: pointer;
-    }
-
-    .arrow1 {
         display: block;
         position: absolute;
         top: 0px;
         right: 15px;
     }
 
-    .arrow2 {
-        display: block;
-        position: absolute;
-        top: 0px;
-        right: 15px;
-    }
 
-    .arrow3 {
-        display: block;
-        position: absolute;
-        top: 0px;
-        right: 15px;
-    }
-
-    .arrow4 {
-        display: block;
-        position: absolute;
-        top: 0px;
-        right: 15px;
-    }
 }
 
 @media (max-width: 600px) {

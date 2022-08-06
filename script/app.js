@@ -43,3 +43,14 @@ AllCross.forEach(logo => {
         }
     })
 })
+
+
+// Footer
+
+const btnFooter = document.querySelector(".arrow-img");
+const FooterCol = document.querySelector(".footer-col ul");
+console.log(btnFooter);
+
+btnFooter.addEventListener("click", () => {
+  FooterCol.classList.toggle("active");
+});
