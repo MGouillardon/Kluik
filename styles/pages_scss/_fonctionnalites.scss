@@ -26,6 +26,15 @@
     padding-bottom: 200px;
 }
 
+@media screen and (max-width: 800px) {
+    .global-container-features {
+        padding-top: 50px;
+    padding-bottom: 100px;
+    }
+}
+
+
+
 // Features 
 
 .features-section {
@@ -111,7 +120,9 @@
 
 // Newsletter
 
-
+.sub-Newsletter{
+    margin-bottom: 100px;
+}
 
 form {
     width: 50%;

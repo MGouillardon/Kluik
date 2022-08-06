@@ -6,17 +6,35 @@ let imgBtn = document.querySelector('.responsive-nav-btn img');
 
 btnNav.addEventListener('click', () => {
 
+    
     navlist.classList.toggle('active-nav');
-    if(imgBtn.src.includes('menu')){
-        imgBtn.src = 'assets/croix.svg';
-        imgBtn.style.width = "30px";
-        imgBtn.style.height = "30px";
+
+        if(window.location.href.includes('index')){
+        if(imgBtn.src.includes('menu')){
+            imgBtn.src = './assets/croix.svg';
+            imgBtn.style.width = "30px";
+            imgBtn.style.height = "30px";
+        } else {
+            imgBtn.src = './assets/menu.svg';
+            imgBtn.style.width = "40px";
+            imgBtn.style.height = "40px";
+        }
+    
     } else {
-        imgBtn.src = 'assets/menu.svg';
-        imgBtn.style.width = "40px";
-        imgBtn.style.height = "40px";
+        if(imgBtn.src.includes('menu')){
+            imgBtn.src = '../assets/croix.svg';
+            imgBtn.style.width = "30px";
+            imgBtn.style.height = "30px";
+        } else {
+            imgBtn.src = '../assets/menu.svg';
+            imgBtn.style.width = "40px";
+            imgBtn.style.height = "40px";
+        }
+    
     }
+
 })
+
 
 
 // FAQ
@@ -44,6 +62,30 @@ AllCross.forEach(logo => {
     })
 })
 
+//Table prices
+
+const choicePrices = Array.from(document.querySelectorAll('.choice'));
+const contentPrices = Array.from(document.querySelectorAll('.pannel'));
+
+choicePrices.forEach(choix => {
+    choix.addEventListener('click', (e) => {
+
+        let indexClic = choicePrices.indexOf(e.target);
+
+        for(i = 0; i < choicePrices.length; i++){
+
+            if(i === indexClic){
+                choicePrices[i].classList.add('active-choice');
+                contentPrices[i].classList.add('pannel-active');
+            } else {
+                choicePrices[i].classList.remove('active-choice');
+                contentPrices[i].classList.remove('pannel-active');
+            }
+
+        }
+
+    })
+})
 
 // Footer
 
