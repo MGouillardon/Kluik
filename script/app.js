@@ -17,3 +17,29 @@ btnNav.addEventListener('click', () => {
         imgBtn.style.height = "40px";
     }
 })
+
+
+// FAQ
+
+const AllCross = document.querySelectorAll('.visible-pannel img');
+
+AllCross.forEach(logo => {
+
+    logo.addEventListener('click', function(){
+        // console.log(this);
+        const height = this.parentNode.parentNode.childNodes[3].scrollHeight;
+        const currentChoice = this.parentNode.parentNode.childNodes[3];
+       
+        if(this.src.includes('plus')){
+            this.src = "assets/minus.svg"
+            currentChoice.style.height = height + 40 + "px";
+            currentChoice.style.opacity = 1;
+            currentChoice.style.padding = "20px 15px";
+        } else {
+            this.src = "assets/plus.svg"
+            currentChoice.style.height = 0;
+            currentChoice.style.opacity = 0;
+            currentChoice.style.padding = 0;
+        }
+    })
+})

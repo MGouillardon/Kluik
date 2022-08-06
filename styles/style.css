@@ -347,7 +347,7 @@ nav .responsive-nav-btn {
   padding: 0 15px;
   height: 0;
   opacity: 0;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.5 ease-in-out;
 }
 
 .toggle-pannel h4 {
