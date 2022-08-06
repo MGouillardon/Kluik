@@ -72,7 +72,8 @@ nav {
     }
 }
 
-@media screen and (max-width: 950px){
+//Responsive -- Navbar
+@media screen and (max-width: 950px) {
     nav {
         justify-content: center;
         flex-direction: column;
@@ -93,6 +94,7 @@ nav {
             height: 70px;
             line-height: 70px;
         }
+
         .nav-logo {
             padding-left: 0;
             width: 100%;
@@ -101,13 +103,16 @@ nav {
             height: 70px;
             line-height: 70px;
         }
+
         .tryout-link {
             display: none;
         }
+
         .responsive-nav-btn {
             display: block;
         }
-        .active-nav{
+
+        .active-nav {
             display: flex;
         }
     }
@@ -117,7 +122,7 @@ nav {
 
 .global-container {
     padding-top: 200px;
-    padding-bottom: 400px;
+    // padding-bottom: 400px;
 }
 
 // Hero
@@ -139,71 +144,236 @@ nav {
     font-size: 32px;
     padding-bottom: 20px;
     line-height: 1.2;
-    
+
 }
 
 .hero img {
     width: 900px;
 }
 
+//Responsive -- hero
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1100px) {
     .global-container {
         padding-top: 150px;
     }
+
     .hero {
         padding: 0;
         height: 700px;
     }
+
     .hero img {
         width: 700px;
     }
+
     .sub-title {
         font-size: 27px;
     }
 }
-@media screen and (max-width: 750px){
+
+@media screen and (max-width: 750px) {
     .global-container {
         padding-top: 100px;
     }
+
     .hero {
         padding: 100px 0 50px;
         height: 500px;
     }
+
     .hero img {
         width: 500px;
     }
+
     .sub-title {
         font-size: 24px;
     }
 }
-@media screen and (max-width: 550px){
+
+@media screen and (max-width: 550px) {
     .global-container {
         padding-top: 100px;
     }
+
     .hero {
         padding: 75px 0;
         height: 400px;
     }
+
     .hero img {
         width: 400px;
     }
+
     .sub-title {
         font-size: 18px;
     }
 }
-@media screen and (max-width: 450px){
+
+@media screen and (max-width: 450px) {
     .global-container {
         padding-top: 100px;
     }
+
     .hero {
         padding: 75px 0;
         height: 400px;
     }
+
     .hero img {
         width: 320px;
     }
+
     .sub-title {
         font-size: 18px;
+    }
+}
+
+// Container Performances
+
+.container-performances {
+    padding: 120px 20px 170px;
+    margin-bottom: 100px;
+    background: linear-gradient(45deg,
+            rgba(251, 247, 230, 0.53) 0%,
+            rgba(251, 247, 230, 0.53) 14.286%,
+            rgba(245, 255, 242, 0.53) 14.286%,
+            rgba(245, 255, 242, 0.53) 28.572%,
+            rgba(243, 255, 252, 0.53) 28.572%,
+            rgba(243, 255, 252, 0.53) 42.858%,
+            rgba(209, 254, 255, 0.53) 42.858%,
+            rgba(209, 254, 255, 0.53) 57.144%,
+            rgba(157, 242, 255, 0.53) 57.144%,
+            rgba(157, 242, 255, 0.53) 71.42999999999999%,
+            rgba(122, 231, 255, 0.53) 71.43%,
+            rgba(122, 231, 255, 0.53) 85.71600000000001%,
+            rgba(144, 224, 246, 0.53) 85.716%,
+            rgba(144, 224, 246, 0.53) 100.002%),
+        linear-gradient(135deg,
+            rgb(248, 144, 216) 0%,
+            rgb(248, 144, 216) 12.5%,
+            rgb(255, 161, 235) 12.5%,
+            rgb(255, 161, 235) 25%,
+            rgb(246, 167, 241) 25%,
+            rgb(246, 167, 241) 37.5%,
+            rgb(242, 184, 251) 37.5%,
+            rgb(242, 184, 251) 50%,
+            rgb(224, 183, 246) 50%,
+            rgb(224, 183, 246) 62.5%,
+            rgb(212, 183, 253) 62.5%,
+            rgb(212, 183, 253) 75%,
+            rgb(161, 146, 251) 75%,
+            rgb(161, 146, 251) 87.5%,
+            rgb(147, 159, 248) 87.5%,
+            rgb(147, 159, 248) 100%);
+    clip-path: polygon(0 0, 100% 17%, 100% 100%, 0 82%);
+
+}
+
+.separation {
+    margin: 0 auto 70px;
+    height: 2px;
+    width: 300px;
+    border-radius: 3px;
+    background: #000;
+
+}
+
+.container-box {
+    width: 100%;
+    @extend %flex-center;
+
+    .box {
+        margin: 0 50px;
+
+        p {
+            text-align: center;
+        }
+
+        .box-number {
+            font-size: 85px;
+            padding-bottom: 10px;
+        }
+
+        .box-title {
+            font-size: 30px;
+            padding-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .box-info {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .container-box {
+        .box {
+            .box-number {
+                font-size: 80px;
+            }
+
+            .box-title {
+                font-size: 26px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 900px) {
+    .container-box {
+        .box {
+            .box-number {
+                font-size: 65px;
+            }
+
+            .box-title {
+                font-size: 20px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 750px) {
+    .container-performances{
+        padding: 175px 20px 150px;
+    }
+    .separation{
+        margin: 0 auto 30px;
+        width: 30%;
+    }
+    .container-box {
+        flex-direction: column;
+
+        .box {
+            margin: 20px 0;
+            .box-number {
+                font-size: 45px;
+            }
+
+            .box-title {
+                font-size: 25px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .container-performances{
+        padding: 135px 20px 150px;
+    }
+    .separation{
+        margin: 0 auto 30px;
+        width: 30%;
+    }
+    .container-box {
+        .box {
+            margin: 20px 0;
+            .box-number {
+                font-size: 35px;
+            }
+
+            .box-title {
+                font-size: 20px;
+            }
+        }
     }
 }
